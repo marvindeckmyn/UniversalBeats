@@ -1,0 +1,140 @@
+body {
+  background: #e9eaed;
+  font-family: Lucida Grande, Lucida Sans Unicode, Lucida Sans, Geneva, Verdana, sans-serif;
+  color: black;
+  font-size: 0.8rem;
+}
+
+a {
+  text-decoration: none;
+  color: #ffff;
+}
+
+input {
+  padding: 5px 10px;
+  border: 2px solid #7e5aa1;
+  box-sizing: border-box;
+}
+
+input:focus {
+  outline: none;
+}
+
+section label {
+  color: #444444;
+  display: block;
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+section input,
+section select {
+  border-radius: 5px;
+  border: 2px solid #7e5aa1;
+  padding: 8px 10px;
+  box-sizing: border-box;
+  margin-bottom: 15px;
+  width: 100%;
+  background-color: #ffff;
+}
+section input[type=submit],
+section input[type=button] {
+  background-color: #7e5aa1;
+  color: #ffff;
+  padding: 8px 40px;
+}
+section .beats img {
+  height: 50px;
+  width: 50px;
+  border-radius: 5px;
+}
+section article.beats {
+  display: flex;
+  margin-bottom: 20px;
+  justify-content: space-between;
+}
+
+header {
+  background: #7e5aa1;
+  color: #ffff;
+  padding-bottom: 10px;
+}
+header li {
+  display: inline;
+  margin-right: 10px;
+}
+header ul {
+  margin-top: 15px;
+  margin-right: 10px;
+}
+header ul img {
+  height: 20px;
+  width: auto;
+  fill: #ffff;
+}
+header div#navigation {
+  display: flex;
+  justify-content: space-between;
+}
+header div#search {
+  margin: 0 15px;
+}
+header div#search input[type=text] {
+  border-radius: 20px;
+  width: 50%;
+}
+header div#search input[type=button] {
+  background-color: #a778d6;
+  color: #ffff;
+  border-radius: 20px;
+}
+
+main {
+  padding: 20px;
+}
+main section {
+  margin-bottom: 30px;
+}
+main section h1 {
+  font-size: 1.2rem;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+main section h2 {
+  font-size: 1rem;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+img#logo {
+  height: 50px;
+  width: auto;
+}
+
+#firstpart {
+  display: flex;
+}
+#firstpart img {
+  margin-right: 15px;
+}
+#firstpart h1 {
+  font-size: 1rem;
+  margin-top: 5px;
+  color: #7e5aa1;
+}
+
+#details {
+  display: flex;
+}
+#details p {
+  margin-right: 5px;
+}
+
+#cart,
+#insights {
+  color: #ffff;
+  background-color: #7e5aa1;
+  border-radius: 10px;
+  padding: 10px;
+}
+
+/*# sourceMappingURL=screen.css.map */

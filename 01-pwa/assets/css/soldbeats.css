@@ -1,0 +1,18 @@
+ul {
+  margin-top: 20px;
+}
+ul li {
+  margin-bottom: 15px;
+}
+ul li p:first-child {
+  margin-bottom: 5px;
+}
+ul li p:last-child {
+  font-size: 0.6rem;
+  color: #7e5aa1;
+}
+ul li span {
+  color: #7e5aa1;
+}
+
+/*# sourceMappingURL=soldbeats.css.map */

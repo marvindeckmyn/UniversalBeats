@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation"
+    app:startDestination="@+id/navigation_home">
+
+    <fragment
+        android:id="@+id/navigation_home"
+        android:name="be.howest.marvindeckmyn.home.HomeFragment"
+        android:label="Universal Beats"
+        tools:layout="@layout/fragment_home">
+        <action
+            android:id="@+id/action_showBeat"
+            app:destination="@+id/beatFragment"/>
+
+        <action
+            android:id="@+id/action_showProducer"
+            app:destination="@+id/producerFragment"/>
+    </fragment>
+
+    <fragment
+        android:id="@+id/navigation_beats"
+        android:name="be.howest.marvindeckmyn.beats.BeatsFragment"
+        android:label="Universal Beats"
+        tools:layout="@layout/fragment_beats">
+        <action
+            android:id="@+id/action_showBeat"
+            app:destination="@+id/beatFragment"/>
+    </fragment>
+
+    <fragment
+        android:id="@+id/navigation_startselling"
+        android:name="be.howest.marvindeckmyn.startselling.StartSellingFragment"
+        android:label="Universal Beats"
+        tools:layout="@layout/fragment_startselling" />
+
+    <fragment
+        android:id="@+id/navigation_profile"
+        android:name="be.howest.marvindeckmyn.profile.ProfileFragment"
+        android:label="Profile"
+        tools:layout="@layout/fragment_profile">
+        <action
+            android:id="@+id/action_showBeat"
+            app:destination="@+id/beatFragment"/>
+    </fragment>
+
+    <fragment
+        android:id="@+id/beatFragment"
+        android:name="be.howest.marvindeckmyn.beat.BeatFragment"
+        android:label="Beat"
+        tools:layout="@layout/fragment_beat">
+        <argument
+            android:name="selectedBeat"
+            app:argType="be.howest.marvindeckmyn.network.Beats"/>
+
+        <action
+            android:id="@+id/action_showProducer"
+            app:destination="@+id/producerFragment"/>
+    </fragment>
+
+    <fragment
+        android:id="@+id/producerFragment"
+        android:name="be.howest.marvindeckmyn.producer.ProducerFragment"
+        android:label="Producer"
+        tools:layout="@layout/fragment_producer">
+        <argument
+            android:name="selectedProducer"
+            app:argType="be.howest.marvindeckmyn.network.Producers"/>
+
+        <action
+            android:id="@+id/action_showBeat"
+            app:destination="@+id/beatFragment"/>
+    </fragment>
+</navigation>

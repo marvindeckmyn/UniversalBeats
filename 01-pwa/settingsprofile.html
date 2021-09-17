@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Edit profile - Universal BEATS.</title>
+    <link rel="icon" type="image/x-icon" href="assets/images/logo.png">
+    <link rel="manifest" href="manifest.json">
+    <link rel="stylesheet" type="text/css" href="assets/css/reset.css">
+    <link rel="stylesheet" type="text/css" href="assets/css/screen.css">
+    <link rel="stylesheet" type="text/css" href="assets/css/settings.css">
+</head>
+<body>
+    <header>
+        <div id="navigation">
+            <a href="index.html">
+                <img id="logo" src="assets/images/logo.png" alt="Logo Universal BEATS." title="Logo Universal BEATS.">
+            </a>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="beats.html">Beats</a></li>
+                    <li><a href="startselling.html">Start Selling</a></li>
+                    <li data-id="login"><a href="login.html">Login</a></li>
+                    <li><a href="cart.html"><img src="assets/media/shopping-cart.svg" alt="Cart" title="Cart"></a></li>
+                </ul>
+            </nav>
+        </div>
+        <div id="search">
+            <form>
+                <label for="searchBeat">Search beat</label>
+                <input type="text" name="searchBeat" id="searchBeat" required>
+                <input type="button" name="search" value="search">
+            </form>
+        </div>
+    </header>
+
+    <main>
+        <section>
+            <h1></h1>
+
+            <form action="#">
+                <label>Change avatar</label>
+                <figure id="avatar"></figure>
+                <p>You can change this in our Android app</p>
+                
+                <label for="name">Name</label>
+                <input type="text" name="name" id="name" value="" maxlength="30">
+
+                <label for="username">Username</label>
+                <input type="text" name="username" id="username" value="" maxlength="15" required>
+
+                <label for="aboutme">About me</label>
+                <input type="text" name="aboutme" id="aboutme" value="" maxlength="150">
+
+                <label for="genre">Genre</label>
+                <select name="genre" id="genre">
+                    <option value="Hip Hop">Hip Hop</option>
+                    <option value="Pop">Pop</option>
+                    <option value="R&B">R&B</option>
+                    <option value="Rock">Rock</option>
+                    <option value="Electronic">Electronic</option>
+                    <option value="Reggae">Reggae</option>
+                    <option value="Country">Country</option>
+                    <option value="World">World</option>
+                </select>
+
+                <label for="twitter">Twitter</label>
+                <input type="text" name="twitter" id="twitter" value="" maxlength="255">
+
+                <label for="instagram">Instagram</label>
+                <input type="text" name="instagram" id="instagram" value="" maxlength="255">
+
+                <label for="youtube">YouTube</label>
+                <input type="text" name="youtube" id="youtube" value="" maxlength="255">
+
+                <label for="email">E-mail</label>
+                <input type="email" name="email" id="email" required value="" maxlength="255">
+
+                <input type="button" name="save" value="Save"> 
+            </form>
+            <p><a href="settingspassword.html">Change password</a></p>
+        </section>
+    </main>
+
+    <script src="assets/js/script.js"></script>
+    <script src="assets/js/settingsprofile.js"></script>
+</body>
+</html>

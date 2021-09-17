@@ -1,0 +1,46 @@
+$primary-color: #7e5aa1;
+$error: #c74635;
+
+#profileheader {
+    text-align: center;
+
+    img {
+        height: 100px;
+        width: 100px;
+        border-radius: 50px;
+        margin-bottom: 15px;
+    }
+
+    p {
+        margin-bottom: 15px;
+    }
+}
+
+#personalfeatures {
+    margin-bottom: 20px;
+}
+
+#socialmedia,
+#personalfeatures {
+    display: flex;
+    justify-content: center;
+
+    p {
+        margin-right: 20px;
+    }
+
+    a {
+        color: $primary-color;
+    }
+}
+
+p#logout {
+    color: $error;
+}
+
+#cart,
+#insights {
+    p {
+        margin-top: 5px;
+    }
+}

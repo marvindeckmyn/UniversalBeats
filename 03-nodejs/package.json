@@ -1,0 +1,30 @@
+{
+  "name": "universal-beats",
+  "version": "1.0.0",
+  "description": "",
+  "main": "main.js",
+  "scripts": {
+    "start": "node main.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://git.ti.howest.be/TI/2020-2021/s4/web-and-mobile-technology/students/marvin-deckmyn/project/03-nodejs.git"
+  },
+  "author": "Marvin Deckmyn",
+  "license": "ISC",
+  "dependencies": {
+    "bcrypt": "^5.0.1",
+    "bcryptjs": "^2.4.3",
+    "express": "^4.17.1",
+    "express-fileupload": "^1.2.1",
+    "fs": "0.0.1-security",
+    "http": "0.0.1-security",
+    "moment": "^2.29.1",
+    "mysql": "^2.18.1",
+    "node-bcrypt": "0.0.1",
+    "path": "^0.12.7"
+  },
+  "engines": {
+    "node": "14.15.5"
+  }
+}

@@ -1,0 +1,41 @@
+#profileheader {
+  text-align: center;
+}
+#profileheader img {
+  height: 100px;
+  width: 100px;
+  border-radius: 50px;
+  margin-bottom: 15px;
+}
+#profileheader p {
+  margin-bottom: 15px;
+}
+
+#personalfeatures {
+  margin-bottom: 20px;
+}
+
+#socialmedia,
+#personalfeatures {
+  display: flex;
+  justify-content: center;
+}
+#socialmedia p,
+#personalfeatures p {
+  margin-right: 20px;
+}
+#socialmedia a,
+#personalfeatures a {
+  color: #7e5aa1;
+}
+
+p#logout {
+  color: #c74635;
+}
+
+#cart p,
+#insights p {
+  margin-top: 5px;
+}
+
+/*# sourceMappingURL=producer.css.map */

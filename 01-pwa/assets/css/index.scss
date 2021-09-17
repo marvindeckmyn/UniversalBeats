@@ -1,0 +1,24 @@
+$primary-color: #7e5aa1;
+
+section {
+    div {
+        display: grid;
+        grid-template-columns: 2fr 2fr;
+    }
+
+    img {
+        height: 150px;
+        width: 150px;
+        border-radius: 5px;
+        margin-right: 20px;
+        margin-bottom: 10px;
+    }
+
+    h2 {
+        color: $primary-color;
+    }
+}
+
+article {
+    margin-bottom: 15px;
+}

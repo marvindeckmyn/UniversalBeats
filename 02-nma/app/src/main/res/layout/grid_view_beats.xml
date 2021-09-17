@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+        <import type="android.view.View"/>
+        <variable
+            name="beats"
+            type="be.howest.marvindeckmyn.network.Beats" />
+    </data>
+
+    <FrameLayout
+        android:layout_height="170dp"
+        android:layout_width="match_parent">
+
+        <ImageView
+        android:id="@+id/beats_image"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:adjustViewBounds="true"
+        android:scaleType="centerCrop"
+        app:imageUrl="@{@string/base_url + beats.cover}"
+        tools:src="@tools:sample/backgrounds/scenic"/>
+
+        <TextView
+            android:id="@+id/beats_name"
+            android:layout_width="230dp"
+            android:layout_height="49dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginStart="60dp"
+            android:layout_marginLeft="60dp"
+            android:fontFamily="@font/roboto"
+            android:text="@{beats.name}" />
+
+        <Button
+            android:id="@+id/beats_buy"
+            android:layout_width="80dp"
+            android:layout_height="40dp"
+            android:layout_marginStart="270dp"
+            android:layout_marginLeft="270dp"
+            android:fontFamily="@font/roboto"
+            android:text="@{@string/euro + beats.price}" />
+
+    </FrameLayout>
+
+</layout>

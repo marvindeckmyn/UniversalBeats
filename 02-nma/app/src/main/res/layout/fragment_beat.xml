@@ -1,0 +1,175 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+        <variable
+            name="viewModel"
+            type="be.howest.marvindeckmyn.beat.BeatViewModel" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context="be.howest.marvindeckmyn.MainActivity">
+
+        <ImageView
+            android:id="@+id/beat_image"
+            android:layout_width="200dp"
+            android:layout_height="200dp"
+            android:layout_marginTop="20dp"
+            android:adjustViewBounds="true"
+            android:scaleType="centerCrop"
+            app:imageUrl="@{@string/base_url + viewModel.selectedBeat.cover}"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:src="@tools:sample/backgrounds/scenic"
+            android:contentDescription="@string/beat_image_desc" />
+
+        <TextView
+            android:id="@+id/beat_audio"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/roboto"
+            android:text="@{@string/base_url + viewModel.selectedBeat.audio}"
+            android:visibility="gone"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/beat_image" />
+
+        <TextView
+            android:id="@+id/beat_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:fontFamily="@font/roboto"
+            android:text="@{viewModel.selectedBeat.name + ' ' + @string/by + ' ' + viewModel.producer.get(0).username}"
+            android:textSize="20sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/beat_image" />
+
+        <TextView
+            android:id="@+id/beat_genre"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:fontFamily="@font/roboto"
+            android:text="@{viewModel.selectedBeat.genre}"
+            android:textSize="14sp"
+            app:layout_constraintEnd_toEndOf="@id/beat_bpm"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/beat_name" />
+
+        <TextView
+            android:id="@+id/beat_bpm"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:fontFamily="@font/roboto"
+            android:text="@{viewModel.selectedBeat.bpm + ' ' + @string/bpm}"
+            android:textSize="14sp"
+            app:layout_constraintEnd_toEndOf="@id/beat_tag"
+            app:layout_constraintStart_toStartOf="@id/beat_genre"
+            app:layout_constraintTop_toBottomOf="@+id/beat_name" />
+
+        <TextView
+            android:id="@+id/beat_tag"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:fontFamily="@font/roboto"
+            android:text="@{@string/hashtag + viewModel.selectedBeat.tag}"
+            android:textSize="14sp"
+            app:layout_constraintEnd_toEndOf="@id/beat_mood"
+            app:layout_constraintStart_toStartOf="@id/beat_bpm"
+            app:layout_constraintTop_toBottomOf="@+id/beat_name" />
+
+        <TextView
+            android:id="@+id/beat_mood"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:fontFamily="@font/roboto"
+            android:text="@{viewModel.selectedBeat.mood}"
+            android:textSize="14sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="@id/beat_tag"
+            app:layout_constraintTop_toBottomOf="@+id/beat_name" />
+
+        <Button
+            android:id="@+id/buy_beat"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:fontFamily="@font/roboto"
+            android:text="@{@string/buy + viewModel.selectedBeat.price}"
+            android:textSize="16sp"
+            app:layout_constraintEnd_toEndOf="@+id/beat_bpm"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/beat_mood" />
+
+        <TextView
+            android:id="@+id/beat_plays"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30dp"
+            android:fontFamily="@font/roboto"
+            android:text="@{viewModel.plays.size() + ` ` + @string/plays}"
+            android:textSize="16sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/buy_beat"
+            app:layout_constraintTop_toBottomOf="@+id/beat_mood" />
+
+        <TextView
+            android:id="@+id/duration_played"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:layout_marginLeft="@dimen/margin"
+            android:fontFamily="@font/roboto"
+            android:text="0:00"
+            android:textSize="10sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/buy_beat"
+            android:layout_marginStart="@dimen/margin" />
+
+        <TextView
+            android:id="@+id/duration_total"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="@dimen/margin"
+            android:layout_marginTop="20dp"
+            android:fontFamily="@font/roboto"
+            android:text="0:00"
+            android:textSize="10sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/buy_beat"
+            android:layout_marginEnd="@dimen/margin" />
+
+        <SeekBar
+            android:id="@+id/duration_beat"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/duration_total"/>
+
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/play_pause"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:clickable="true"
+            android:focusable="true"
+            android:src="@drawable/ic_play"
+            app:backgroundTint="@color/purple_500"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/duration_beat"
+            android:contentDescription="@string/play_desc" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

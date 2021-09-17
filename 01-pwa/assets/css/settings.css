@@ -1,0 +1,28 @@
+figure {
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+p {
+  margin-bottom: 15px;
+  text-align: center;
+}
+
+a {
+  font-weight: bold;
+  color: #7e5aa1;
+}
+
+#avatar img {
+  width: 100px;
+  height: 100px;
+  border-radius: 50px;
+}
+
+#background img {
+  width: 200px;
+  height: 100px;
+  border-radius: 10px;
+}
+
+/*# sourceMappingURL=settings.css.map */

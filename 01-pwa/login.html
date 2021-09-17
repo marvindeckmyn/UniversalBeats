@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login - Universal BEATS.</title>
+    <link rel="icon" type="image/x-icon" href="assets/images/logo.png">
+    <link rel="manifest" href="manifest.json">
+    <link rel="stylesheet" type="text/css" href="assets/css/reset.css">
+    <link rel="stylesheet" type="text/css" href="assets/css/screen.css">
+</head>
+<body>
+    <header>
+        <div id="navigation">
+            <a href="index.html">
+                <img id="logo" src="assets/images/logo.png" alt="Logo Universal BEATS." title="Logo Universal BEATS.">
+            </a>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="beats.html">Beats</a></li>
+                    <li><a href="startselling.html">Start Selling</a></li>
+                    <li data-id="login"><a href="login.html">Login</a></li>
+                    <li><a href="cart.html"><img src="assets/media/shopping-cart.svg" alt="Cart" title="Cart"></a></li>
+                </ul>
+            </nav>
+        </div>
+        <div id="search">
+            <form>
+                <label for="searchBeat">Search beat</label>
+                <input type="text" name="searchBeat" id="searchBeat" required>
+                <input type="button" name="search" value="search">
+            </form>
+        </div>
+    </header>
+
+    <main>
+        <section>
+            <h1>Login</h1>
+            <form>
+                <label for="username">Username</label>
+                <input type="text" id="username" name="username" required autocomplete="username" autofocus>
+
+                <label for="password">Password</label>
+                <input type="password" id="password" name="password" required autocomplete="current-password">
+                <br>
+                <input type="button" name="login" value="Login">
+            </form>
+
+            <h2>No account?</h2>
+            <input type="button" name="register" value="Register">
+        </section>
+    </main>
+
+    <script src="assets/js/script.js"></script>
+    <script src="assets/js/login.js"></script>
+</body>
+</html>

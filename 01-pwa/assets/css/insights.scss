@@ -1,0 +1,36 @@
+$primary-color: #7e5aa1;
+$black: rgba(0, 0, 0, 0);;
+
+article {
+  margin-bottom: 30px;
+
+  img {
+    height: 100px;
+    width: 100px;
+    border-radius: 5px;
+    margin-bottom: 5px;
+  }
+
+  h1 {
+    color: $primary-color;
+  }
+}
+
+path.line {
+    fill: none;
+    stroke: $primary-color;
+  }
+
+.axis {
+  line {
+    stroke: $black;
+    stroke-width: 0.5;
+    shape-rendering: crispEdges;
+  }
+
+  path {
+    stroke: $black;
+    stroke-width: 0.7;
+    shape-rendering: crispEdges;
+  }
+}

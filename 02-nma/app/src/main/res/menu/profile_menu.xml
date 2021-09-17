@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/homepage"
+        android:title="@string/title_home" />
+
+    <item
+        android:id="@+id/sold_beats"
+        android:title="@string/sold_beats" />
+
+    <item
+        android:id="@+id/settings"
+        android:title="@string/settings" />
+
+    <item
+        android:id="@+id/logout"
+        android:title="@string/log_out" />
+
+</menu>

@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+        <import type="android.view.View"/>
+        <variable
+            name="soldBeats"
+            type="be.howest.marvindeckmyn.network.SoldBeats" />
+    </data>
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="170dp">
+
+        <TextView
+            android:id="@+id/sold_beats_not"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="60dp"
+            android:layout_marginBottom="20dp"
+            android:layout_marginStart="60dp"
+            android:fontFamily="@font/roboto"
+            android:text="@{@string/your_beat + soldBeats.data + @string/has_been_sold}"/>
+
+        <TextView
+            android:id="@+id/sold_beats_not_time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="60dp"
+            android:layout_marginLeft="60dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginBottom="20dp"
+            android:fontFamily="@font/roboto"
+            android:text="@{soldBeats.created_at}"
+            android:textSize="8sp" />
+    </FrameLayout>
+</layout>

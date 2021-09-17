@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register - Universal BEATS.</title>
+    <link rel="icon" type="image/x-icon" href="assets/images/logo.png">
+    <link rel="manifest" href="manifest.json">
+    <link rel="stylesheet" type="text/css" href="assets/css/reset.css">
+    <link rel="stylesheet" type="text/css" href="assets/css/screen.css">
+</head>
+<body>
+    <header>
+        <div id="navigation">
+            <a href="index.html">
+                <img id="logo" src="assets/images/logo.png" alt="Logo Universal BEATS." title="Logo Universal BEATS.">
+            </a>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="beats.html">Beats</a></li>
+                    <li><a href="startselling.html">Start Selling</a></li>
+                    <li data-id="login"><a href="login.html">Login</a></li>
+                    <li><a href="cart.html"><img src="assets/media/shopping-cart.svg" alt="Cart" title="Cart"></a></li>
+                </ul>
+            </nav>
+        </div>
+        <div id="search">
+            <form>
+                <label for="searchBeat">Search beat</label>
+                <input type="text" name="searchBeat" id="searchBeat" required>
+                <input type="button" name="search" value="search">
+            </form>
+        </div>
+    </header>
+
+    <main>
+        <section>
+            <h1>Register</h1>
+            <form action="#">
+                <label for="name">Full name</label>
+                <input type="text" id="name" name="name" maxlength="30" autocomplete="name" autofocus>
+
+                <label for="email">E-mail</label>
+                <input type="email" id="email" name="email" maxlength="255" required autocomplete="email">
+
+                <label for="username">Username</label>
+                <input type="text" id="username" name="username" maxlength="15" required autocomplete="username">
+
+                <label for="password">Password</label>
+                <input type="password" id="password" name="password" required autocomplete="new-password">
+
+                <label for="password-confirm">Confirm password</label>
+                <input type="password" id="password-confirm" name="password-confirm" required autocomplete="new-password">
+
+                <label for="aboutme">About me</label>
+                <input type="text" id="aboutme" name="aboutme" maxlength="150">
+
+                <label for="genre">Genre</label>
+                <select name="genre" id="genre">
+                    <option disabled selected value>-- select a genre --</option>
+                    <option value="Hip Hop">Hip Hop</option>
+                    <option value="Pop">Pop</option>
+                    <option value="R&B">R&B</option>
+                    <option value="Rock">Rock</option>
+                    <option value="Electronic">Electronic</option>
+                    <option value="Reggae">Reggae</option>
+                    <option value="Country">Country</option>
+                    <option value="World">World</option>
+                </select>
+
+                <label for="twitter">Twitter</label>
+                <input type="text" id="twitter" name="twitter" maxlength="255">
+
+                <label for="instagram">Instagram</label>
+                <input type="text" id="instagram" name="instagram" maxlength="255">
+
+                <label for="youtube">YouTube</label>
+                <input type="text" id="youtube" name="youtube" maxlength="255">
+                <br>
+                <input type="button" name="register" value="Register">
+            </form>
+
+            <h2>Do you already have an account?</h2>
+            <input type="button" name="login" value="Login">
+        </section>
+    </main>
+
+    <script src="assets/js/script.js"></script>
+    <script src="assets/js/register.js"></script>
+</body>
+</html>
